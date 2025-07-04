@@ -228,14 +228,12 @@
     'img/b1.jpeg',
     'img/b2.jpg',
     'img/b3.png',
-    'img/b1.jpeg',
-    
   ];
 
   let currentIndex = 0;
 
   function changeBackground() {
-    heroSection.style.backgroundImage = url('${images[currentIndex]}');
+    heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
     currentIndex = (currentIndex + 1) % images.length;
   }
 
@@ -245,6 +243,7 @@
   // Change image every 5 seconds
   setInterval(changeBackground, 5000);
 </script>
+
 
 
 
