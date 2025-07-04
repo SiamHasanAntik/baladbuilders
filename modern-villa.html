@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Villa - Balad Builders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Additional styles specific to this page */
+    .villa-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .villa-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .villa-image {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+    }
+
+    .villa-description {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+
+    .villa-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .feature-card {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .feature-card h4 {
+      margin-bottom: 10px;
+      color: #ef4444;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background: #1e293b;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      margin-bottom: 50px;
+    }
+
+    .back-btn:hover {
+      background: #ef4444;
+    }
+
+    .menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background: #1e293b;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+
+    @media (max-width: 600px) {
+      .villa-title {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="img/wmremove-transformed.png" alt="Balad Builders Logo" />
+      <h1>Balad Builders</h1>
+    </div>
+
+    <!-- Hamburger toggle button (right side) -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main class="villa-container">
+  <a href="index.html" class="back-btn">← Back to Home</a>
+
+  <h2 class="villa-title">Modern Villa</h2>
+  <img src="img/Modern Villa.jpg" alt="Modern Villa" class="villa-image" />
+
+  <p class="villa-description">
+    Welcome to our signature Modern Villa, designed with elegance and comfort in mind.
+    This luxury residential villa combines cutting-edge architecture with the finest materials,
+    offering spacious living areas, natural light, and premium amenities for your perfect home.
+  </p>
+
+  <div class="villa-features">
+    <div class="feature-card">
+      <h4>🏠 Spacious Living</h4>
+      <p>Open-plan living rooms with large windows and seamless indoor-outdoor flow.</p>
+    </div>
+    <div class="feature-card">
+      <h4>🌿 Eco-Friendly Design</h4>
+      <p>Energy-efficient materials and solar panel installation to reduce your carbon footprint.</p>
+    </div>
+    <div class="feature-card">
+      <h4>🍽️ Modern Kitchen</h4>
+      <p>Fully equipped kitchen with the latest appliances and elegant finishes.</p>
+    </div>
+    <div class="feature-card">
+      <h4>🛌 Luxurious Bedrooms</h4>
+      <p>Spacious bedrooms with walk-in closets and en-suite bathrooms.</p>
+    </div>
+    <div class="feature-card">
+      <h4>🏊‍♂️ Private Pool</h4>
+      <p>Outdoor swimming pool with a sun deck for relaxation and entertainment.</p>
+    </div>
+    <div class="feature-card">
+      <h4>🚗 Garage</h4>
+      <p>Secure garage space for 2+ vehicles with direct home access.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Balad Builders. All rights reserved.
+</footer>
+
+<!-- Floating WhatsApp & Call Button -->
+<div class="floating-btn">
+  <a href="https://wa.me/8801611702362" target="_blank">WhatsApp</a>
+  <a href="tel:+8801611702362" class="call">Call Now</a>
+</div>
+
+<script>
+  function toggleMenu() {
+    const navUL = document.querySelector('nav ul');
+    navUL.classList.toggle('active');
+  }
+</script>
+
+
+</body>
+
+</html>

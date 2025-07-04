@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Office - Balad Builders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .office-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .office-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .office-image {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      margin-bottom: 30px;
+    }
+
+    .office-description {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+
+    .office-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .feature-card {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .feature-card h4 {
+      margin-bottom: 10px;
+      color: #ef4444;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background: #1e293b;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      margin-bottom: 50px;
+    }
+
+    .back-btn:hover {
+      background: #ef4444;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 1001;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        background: #1e293b;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-top: 30px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+      }
+
+      nav ul.active {
+        right: 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .office-title {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="img/wmremove-transformed.png" alt="Balad Builders Logo" />
+        <h1>Balad Builders</h1>
+      </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="office-container">
+    <a href="index.html" class="back-btn">← Back to Home</a>
+
+    <h2 class="office-title">Corporate Office</h2>
+    <img src="img/Corporate Office.jpg" alt="Corporate Office" class="office-image" />
+
+    <p class="office-description">
+      Our Corporate Office project stands as a beacon of modern commercial architecture. Designed for productivity,
+      elegance, and sustainability, this office complex features intelligent space management, premium finishes, and
+      eco-conscious design. Perfect for hosting multiple businesses, it reflects your brand’s commitment to excellence.
+    </p>
+
+    <div class="office-features">
+      <div class="feature-card">
+        <h4>🏢 Executive Floors</h4>
+        <p>Fully air-conditioned spaces with high ceilings, glass partitions, and premium workstations.</p>
+      </div>
+      <div class="feature-card">
+        <h4>💼 Meeting Halls</h4>
+        <p>Advanced conference rooms with projection, AV systems, and soundproofing.</p>
+      </div>
+      <div class="feature-card">
+        <h4>☕ Cafeteria</h4>
+        <p>Modern food court and relaxation zone for employees and visitors.</p>
+      </div>
+      <div class="feature-card">
+        <h4>🔒 Security</h4>
+        <p>24/7 surveillance, access control, and fire-safety systems installed.</p>
+      </div>
+      <div class="feature-card">
+        <h4>🅿️ Parking Facility</h4>
+        <p>Multi-level basement parking for employees and guests.</p>
+      </div>
+      <div class="feature-card">
+        <h4>🌿 Green Elements</h4>
+        <p>Vertical gardens, solar panels, and rainwater harvesting system included.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Balad Builders. All rights reserved.
+  </footer>
+
+  <div class="floating-btn">
+    <a href="https://wa.me/8801611702362" target="_blank">WhatsApp</a>
+    <a href="tel:+8801611702362" class="call">Call Now</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navUL = document.querySelector('nav ul');
+      navUL.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

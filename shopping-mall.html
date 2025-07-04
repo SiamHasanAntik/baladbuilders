@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Mall - Balad Builders</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="img/wmremove-transformed.png" alt="Balad Builders Logo" />
+      <h1>Balad Builders</h1>
+    </div>
+    <nav id="nav">
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="background-image: url('img/Shopping\ Mall.jpeg');">
+  <div class="hero-content">
+    <h1>Shopping Mall Project</h1>
+    <p>Spacious commercial center with modern amenities.</p>
+    <a href="index.html" class="btn">← Back to Home</a>
+  </div>
+</section>
+
+<section>
+  <h2>About This Project</h2>
+  <p>Our Shopping Mall construction combines modern aesthetics with commercial functionality. It includes climate-controlled interiors, escalators, elevators, and ample parking space. Designed to meet international standards, it offers a seamless shopping experience for all age groups.</p>
+</section>
+
+<footer>
+  &copy; 2025 Balad Builders. All rights reserved.
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>

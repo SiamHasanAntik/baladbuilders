@@ -17,6 +17,13 @@
       <img src="img/wmremove-transformed.png" alt="Balad Builders Logo" />
       <h1>Balad Builders</h1>
     </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+    
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
@@ -78,21 +85,21 @@
       <img src="img/Modern Villa.jpg" alt="Project 1" />
       <h3>Modern Villa</h3>
       <p>Luxury residential villa with modern design and top-notch materials.</p>
-      <a href="#" class="btn small-btn">View Details</a>
+      <a href="modern-villa.html" class="btn small-btn">View Details</a>
     </div>
     <!-- Card 2 -->
     <div class="card">
       <img src="img/Corporate Office.jpg" alt="Project 2" />
       <h3>Corporate Office</h3>
       <p>State-of-the-art office complex for corporate businesses.</p>
-      <a href="#" class="btn small-btn">View Details</a>
+      <a href="corporate-office.html" class="btn small-btn">View Details</a>
     </div>
     <!-- Card 3 -->
     <div class="card">
       <img src="img/Shopping Mall.jpeg" alt="Project 3" />
       <h3>Shopping Mall</h3>
       <p>Spacious commercial center with modern amenities.</p>
-      <a href="#" class="btn small-btn">View Details</a>
+      <a href="shopping-mall.html" class="btn small-btn">View Details</a>
     </div>
     <!-- Card 4 -->
     <div class="card">
@@ -120,7 +127,7 @@
       <img src="img/Hospital.jpg" alt="Project 7" />
       <h3>Hospital</h3>
       <p>State-of-the-art healthcare facility with advanced equipment.</p>
-      <a href="#" class="btn small-btn">View Details</a>
+      <a href="hospital.html" class="btn small-btn">View Details</a>
     </div>
     <!-- Card 8 -->
     <div class="card">
@@ -221,15 +228,12 @@
 
 
 <script>
+  function toggleMenu() {
+    document.querySelector("nav ul").classList.toggle("active");
+  }
+
   const heroSection = document.getElementById('hero');
-
-  const images = [
-    'img/hospital.jpg',
-    'img/b1.jpeg',
-    'img/b2.jpg',
-    'img/b3.png',
-  ];
-
+  const images = ['img/hospital.jpg', 'img/b1.jpeg', 'img/b2.jpg', 'img/b3.png'];
   let currentIndex = 0;
 
   function changeBackground() {
@@ -237,11 +241,10 @@
     currentIndex = (currentIndex + 1) % images.length;
   }
 
-  // Initial background
   changeBackground();
-
-  // Change image every 5 seconds
   setInterval(changeBackground, 5000);
+
+  
 </script>
 
 
